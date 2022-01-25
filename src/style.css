@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('./fonts/Lobster-Regular.ttf');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'coco';
+    src: url('./fonts/Cocogoose\ Pro\ Light-trial.ttf');
+}
+:root {
+    font-size: 16px;
+    --red: rgb(255, 0, 32);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+#content{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+.home{
+    display: block;
+    background-color: var(--red);
+    width: 80%;
+    height: 100vh;
+    opacity: .4;
+    margin-left: 10%;
+}
+.menu {
+    display: none;
+    background-color: black;
+    width: 80%;
+    height: 100vh;
+}
+.contact {
+    display: none;
+    background-color: white;
+    width: 80%;
+    height: 100vh;
+}
+.about {
+    display: none;
+    background-color: grey;
+    width: 80%;
+    height: 100vh;
+}
+img {
+    width:100rem;
+    max-width: 100vw;
+}
+.nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+}
+.nav ul {
+    font-family: 'coco';
+    display:inline-flex;
+    list-style:none;
+    gap: 3rem;
+    color:var(--red);
+    font-size:3rem;
+    color: black;
+    padding-bottom: 5rem;
+}
+.nav li {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+}
+.nav li::after{
+    content:'';
+    position:absolute;
+    width: 75%;
+    height: .1rem;
+    background: black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation-name: navhoverout;
+    animation-duration: .25s;
+}
+.nav li:hover::after{
+    transform: scale(1.5);
+    animation-name: navhover;
+    animation-duration: .25s;
+    animation-timing-function:ease-in-out;
+}
+.nav li:hover{
+    color: var(--red);
+}
+.slider {
+    display:flex;
+    width: 60%;
+    height: 25vh;
+    background-color: grey;
+    border: .25rem solid black;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgnav {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.1;
+    color: black;
+    align-items: center;
+}
+#content {
+    width: 100%;
+    height: 100vh;
+    background-color:antiquewhite;
+}
+@keyframes navhover {
+    from {
+        transform: scale(1);
+    }
+    to {
+       transform: scale(1.5);
+    }
+}
+@keyframes navhoverout {
+   from {
+       transform: scale(1.5);
+   }
+   to {
+       transform: scale(1);
+   }
+}
