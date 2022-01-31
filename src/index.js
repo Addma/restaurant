@@ -1,60 +1,63 @@
 
 import Icon from './images/icon2.png';
+import git from './images/github.png';
 import './style.css';
-import home from './home.js';
-import menu from './menu.js';
-import about from './about.js';
-import contact from './contact.js';
-let h = home();
-let m = menu();
-let a = about();
-let c = contact();
-console.log("AYO");
-const body = document.body;
+import homepage from './home.js';
+import menupage from './menu.js';
+import contactpage from './contact.js';
+let h = homepage;
+let m = menupage();
+let c = contactpage();
+const homeBut = document.querySelector("#home");
+const menuBut = document.querySelector("#menu");
+const contactBut = document.querySelector("#contact");
 const nav = document.querySelector(".nav");
 const icon = document.createElement("img");
 const content = document.querySelector("#content");
-content.append(h);
+h.createHome();
+content.append(h.home);
 content.append(m);
-content.append(a);
 content.append(c);
 icon.src = Icon;
-body.insertBefore(icon, nav);
+document.getElementById("header").append(icon);
 icon.addEventListener("click", () => {
     displayNone();
-    h.style.display = 'block';
-})
+    h.home.style.display = 'flex';
+});
 function displayNone() {
-    if (window.getComputedStyle(h).display !== 'none'){
-         h.style.display = 'none';
+    if (h.home.style.display !== 'none'){
+         h.home.style.display = 'none';
+         h.intervalClear();
+        homeBut.style.backgroundColor = "white";
     }else if (window.getComputedStyle(m).display !=='none'){
         m.style.display = 'none';
-    }else if (window.getComputedStyle(a).display !== 'none'){
-        a.style.display = 'none';
+        menuBut.style.backgroundColor = "white";
     }else if (window.getComputedStyle(c).display !== 'none'){
         c.style.display = 'none';
+        contactBut.style.backgroundColor = "white";
     }
 }
 function createNavbar() {
     const home = document.querySelector("#home");
     const menu = document.querySelector("#menu");
-    const about = document.querySelector("#about");
     const contact = document.querySelector("#contact");
     home.addEventListener("click", () => {
         displayNone();
-        h.style.display = 'block';
+        h.home.style.display = 'flex';
+        h.intervalStart();
+        homeBut.style.backgroundColor = "rgba(0,0,0,.4)";
     });
     menu.addEventListener("click", () =>{
         displayNone();
-        m.style.display = 'block';
-    });
-     about.addEventListener("click", () =>{
-        displayNone();
-        a.style.display = 'block';
+        m.style.display = 'flex';
+        menuBut.style.backgroundColor = "rgba(0,0,0,.4)";
     });
     contact.addEventListener("click", () =>{
         displayNone();
-        c.style.display = 'block';
+        c.style.display = 'flex';
+        contactBut.style.backgroundColor = "rgba(0,0,0,.4)";
     });
 }
+let image = document.querySelector(".footer img");
+image.src = git;
 createNavbar();
