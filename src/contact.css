@@ -1,0 +1,75 @@
+@font-face {
+    font-family: coco;
+    src: url('./fonts/Cocogoose\ Pro\ Light-trial.ttf');
+}
+@font-face {
+    font-family: poppins;
+    src: url('./fonts/Poppins-Medium.ttf');
+}
+.contact {
+    font-family: coco;
+    display: none;
+    background-color: var(--red);
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    padding-top: 5%;
+    flex-direction:column;
+    gap: 5vw;
+}
+.contact-head {
+    color: white;
+    font-size: 10vw;
+}
+.map {
+    width: fit-content;
+    height: fit-content;
+}
+iframe {
+    width: 800px;
+    height: 50vh;
+    border-radius:1%;
+}
+.hours {
+    width: 20%;
+    height: 25%;
+    font-family: poppins;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color:white;
+    padding: 5%;
+    text-align: left;
+    border-radius: 25%;
+    gap: 6vw;
+}
+.hours ul {
+    list-style: none;
+    font-style:italic;
+    color:rgb(71, 70, 70);
+    margin-top: -6vw;
+    font-size: 1vw;
+}
+.wrapper {
+    display:flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.hoursTxt {
+    color: black;
+    font-size: 2.5vw;
+}
+.directions {
+    font-size: 2vw;
+    color: white;
+}
+@media only screen and (max-width: 700px){
+    .wrapper {
+        flex-direction: column;
+        align-items:center;
+    }
+    iframe {
+        width: 400px;
+    }
+}
