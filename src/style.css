@@ -265,4 +265,7 @@ body {
     .nav {
         padding-bottom: 0;
     }
+    .home-wrap .section {
+        font-size: 16px;
+    }
 }

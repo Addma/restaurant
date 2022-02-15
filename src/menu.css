@@ -30,11 +30,7 @@
     height: 80%;
     padding: 10%;
 }
-@media only screen and (max-width: 700px){
-    .menugrid {
-        grid-template-columns: 1fr;
-    }
-}
+
 .menu-header {
     margin-top: 10vh;
 }
@@ -76,4 +72,14 @@
  .regLarge {
      text-align: right;
  }
+ @media only screen and (max-width: 700px){
+    .menugrid {
+        grid-template-columns: 1fr;
+        gap: 40vw;
+        font-size: 5vw;
+    }
+    .card ul {
+        font-size: 3vw;
+    }
+}
 
