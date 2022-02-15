@@ -8,6 +8,7 @@
 .menu {
     display: none;
     width: 100%;
+    min-height: 100vh;
     height:100%;
     font-size: 3vw;
     font-family: 'coco';
@@ -28,6 +29,11 @@
 /*background-color: black;*/
     height: 80%;
     padding: 10%;
+}
+@media only screen and (max-width: 700px){
+    .menugrid {
+        grid-template-columns: 1fr;
+    }
 }
 .menu-header {
     margin-top: 10vh;
