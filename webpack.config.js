@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -10,14 +11,14 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/'
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Barrie BBQ Chicken',
             template: './dist/index.html',
-            favicon: './src/images/icon.png'
-        })
+            favicon: './src/images/icon.png',
+        }),
     ],
     module: {
         rules: [
@@ -31,8 +32,8 @@ module.exports = {
             },
             {
                 test: /\.(woff|ttf)$/i,
-                type: 'asset/resource'
-            }
+                type: 'asset/resource',
+            },
         ],
     },
 };
