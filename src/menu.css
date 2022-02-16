@@ -26,13 +26,9 @@
     grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
     width: 80%;
     gap: 10vw;
-/*background-color: black;*/
     height: 80%;
     padding: 10%;
-}
-
-.menu-header {
-    margin-top: 10vh;
+    padding-top: 20%;
 }
 .card {
     font-family: 'Poppins';

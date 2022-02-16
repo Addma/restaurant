@@ -207,18 +207,24 @@ body {
 }
 .home-wrap {
     display:flex;
-    height: 30vw;
+    height: 400px;
     width: 100%;
+    min-height: fit-content;
+    box-shadow: 0 0 40px black;
 }
 .home-wrap .section {
     display:flex;
     justify-content:center;
     font-family:'Lobster';
     width: 25%;
+    min-height: fit-content;
     height: 75%;
     font-size: 2.5vw;
     align-items:center;
     overflow-wrap: break-word;
+    padding: 1rem;
+        border-bottom: 1px solid black;
+
 }
 
 .red {
@@ -266,6 +272,9 @@ body {
         padding-bottom: 0;
     }
     .home-wrap .section {
-        font-size: 16px;
+        font-size: 20px;
+    }
+    .home-wrap {
+        height:300px;
     }
 }
